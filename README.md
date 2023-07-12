@@ -4,9 +4,17 @@ A new Flutter project.
 
 ## Getting Started
 
+Uygulamayı çalıştırmadan önce terminalden aşağıdaki komut çalıştırılması gerekir!
 ```console
 flutter pub run build_runner build
 ```
+Uygulamaya giriş yapabilecek Kullanıcalar
+email: test_user@test.com
+şifre: password
+email: user_test@test.com
+şifre: password
+
+
 
 This project is a starting point for a Flutter application.
 
