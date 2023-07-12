@@ -15,3 +15,6 @@ final getProductProvider =
     );
   }).toList();
 });
+
+final bulbTurnProvider = StateProvider<bool>((ref) => true);
+final overIndexProvider = StateProvider.autoDispose<double>((ref) => 0);

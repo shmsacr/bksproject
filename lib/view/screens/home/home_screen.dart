@@ -2,6 +2,8 @@ import 'package:bksproject/controller/product_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
+import '../DetailScreen/detail_screen.dart';
+
 class HomeScreen extends ConsumerWidget {
   const HomeScreen({
     Key? key,
@@ -19,19 +21,41 @@ class HomeScreen extends ConsumerWidget {
                 itemCount: data.length,
                 itemBuilder: (context, index) {
                   return InkWell(
-                    onTap: () {},
+                    onTap: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => DetailScreen(
+                                    productWithId: data[index],
+                                  )));
+                    },
                     child: Card(
-                      child: Column(
-                        children: [
-                          ListTile(
-                              leading: SizedBox(
-                            width: double.infinity,
-                            child: Image.network(
-                              data[index].product.productPictures.first,
-                              fit: BoxFit.cover,
+                      child: Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Row(
+                          children: [
+                            SizedBox(
+                              width: 200,
+                              height: 200,
+                              child: Image.network(
+                                  data[index].product.productPictures.first),
                             ),
-                          ))
-                        ],
+                            SizedBox(
+                              width: 10,
+                            ),
+                            Expanded(
+                                child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Text(data[index].product.productName),
+                                SizedBox(
+                                  height: 4,
+                                ),
+                                Text(data[index].product.macAddres)
+                              ],
+                            ))
+                          ],
+                        ),
                       ),
                     ),
                   );

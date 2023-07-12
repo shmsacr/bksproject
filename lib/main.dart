@@ -1,4 +1,4 @@
-import 'package:bksproject/view/screens/home/home_screen.dart';
+import 'package:bksproject/view/screens/login/login_splash.dart';
 import 'package:bksproject/view/theme/app_theme.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
@@ -22,7 +22,7 @@ class MyApp extends ConsumerWidget {
       themeMode: ThemeMode.system,
       debugShowCheckedModeBanner: false,
       home: Scaffold(
-        body: HomeScreen(),
+        body: Splash(),
       ),
     );
   }

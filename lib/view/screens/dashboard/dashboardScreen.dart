@@ -51,7 +51,8 @@ class DashboardScreen extends ConsumerWidget {
           CurvedNavigationBar(
             height: 44,
             items: const [
-              Icon(Icons.home, color: AppColors.primaryContainer),
+              Icon(Icons.add_business_rounded,
+                  color: AppColors.primaryContainer),
               Icon(Icons.account_circle_sharp,
                   color: AppColors.primaryContainer),
             ],

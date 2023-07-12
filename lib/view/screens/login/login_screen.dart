@@ -89,7 +89,7 @@ class LoginScreen extends ConsumerWidget {
         ),
 
         cardTheme: CardTheme(
-          color: Colors.purple.shade100,
+          color: Colors.orangeAccent.shade100,
           elevation: 5,
           margin: EdgeInsets.only(top: 15),
           shape: ContinuousRectangleBorder(
@@ -109,7 +109,7 @@ class LoginScreen extends ConsumerWidget {
         ),
         buttonTheme: LoginButtonTheme(
           splashColor: Colors.red,
-          backgroundColor: Colors.purple.shade200,
+          backgroundColor: Colors.orange.shade900,
           highlightColor: Colors.blue,
           shape: BeveledRectangleBorder(
             borderRadius: BorderRadius.circular(3),
